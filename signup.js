@@ -22,7 +22,7 @@ document.getElementById("signupForm").addEventListener("submit", function(e) {
             padding:20px;
         ">
             Thank you. One of our board will contact you soon. If you don't hear
-            from us within 48 hours, please reach out via the contact page.
+            from us within 24 hours, please fill out the google form linked on the resources page.
         </div>
     `;
 
@@ -32,3 +32,4 @@ document.getElementById("signupForm").addEventListener("submit", function(e) {
     }, 7000);
 
 });
+
