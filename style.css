@@ -33,18 +33,18 @@ body {
 }
 
 .company-header {
-    margin: 0.5in;
+    margin: 0.5rem;
     background-color: #111;
     color: white;
     text-align: center;
     padding: 20px 0;
-    border-radius: 6px;
+    border-radius: 6rem;
 }
 
 .company-header h1 {
     margin: 0;
     font-size: 2.5rem;
-    letter-spacing: 2px;
+    letter-spacing: .5rem;
 }
 
 .hub-sections {
@@ -94,13 +94,27 @@ body {
     color: white;
 }
 
-.secondary {
-    background-color: #ddd;
-    color: black;
-}
-
 .bottom-btn:hover {
     opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .hub-sections {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .hub-card {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    .bottom-btn {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
 }
 
 .info-container {
@@ -140,20 +154,23 @@ body {
     width: 33.33%;
     display: flex;
     flex-direction: column;
+    height: 150%;
 }
 
 .beliefs-section {
-    flex: 2;
+    flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
     border-left: 2px solid #ddd;
 }
 
 .info-buttons {
-    flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    padding: 10px;
 }
+
 
 .info-btn {
     text-decoration: none;
@@ -175,6 +192,47 @@ body {
 
 .info-btn:hover {
     opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+
+    .info-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info-left, .info-right {
+        width: 100%;
+    }
+
+    .image-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .image-card {
+        width: 100%;
+    }
+
+    
+    .beliefs-section {
+        max-height: 300px;
+        overflow-y: auto;
+        border-left: none;
+        border-top: 2px solid #ddd;
+    }
+
+    .info-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .info-btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1rem;
+    }
 }
 
 .contact-container {
@@ -206,6 +264,38 @@ body {
 .return-home {
     width: 100%;
     margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .staff-card {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    .contact-container {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .return-home {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .return-home a {
+        display: inline-block;
+        width: 80%;
+        padding: 15px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        background: black;
+        color: white;
+        border-radius: 8px;
+    }
+
+    .return-home a:hover {
+        opacity: 0.9;
+    }
 }
 
 .signup-page {
@@ -254,4 +344,99 @@ body {
 
 .submit-btn:hover {
     opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .signup-page {
+        padding: 20px;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .signup-form {
+        width: 95%;
+        max-width: 450px;
+        max-height: 80vh;
+        padding: 20px;
+    }
+
+    .signup-form input,
+    .signup-form textarea {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+.resources-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.resources-table {
+    width: 80%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.resources-table th,
+.resources-table td {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.resources-table th {
+    background-color: #f0f0f0;
+}
+
+.resources-table a {
+    text-decoration: none;
+    color: #000;
+}
+
+.resources-table a:hover {
+    text-decoration: underline;
+}
+
+/* Icons styling */
+.resources-table svg {
+    margin-right: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.resources-table svg:hover {
+    fill: #555; /* subtle hover color */
+}
+
+@media (max-width: 768px) {
+
+    .resources-container {
+        padding: 20px 10px;
+    }
+
+    .resources-table {
+        width: 100%;
+        font-size: 1rem;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .resources-table th,
+    .resources-table td {
+        padding: 10px;
+        white-space: nowrap;
+    }
+
+    .resources-table svg {
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+    }
 }
